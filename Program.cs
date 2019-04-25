@@ -11,19 +11,22 @@ namespace LessonLoops
     {
         static void Main(string[] args)
         {
-            // pass by ref default pass by value
-            int num1 = 10;
-            int num2 = 20;
-            Console.WriteLine("before the swop function is called num1 : {0} num2 : {1}", num1, num2);
-            Swop(ref num1, ref num2);
-            Console.WriteLine("after the swop function is called num1 : {0} num2 : {1}", num1, num2);
+            // enum a custum data type for key value paires
+            CarColor car1 = CarColor.bule;
+            PaintCar(car1);
             Console.ReadLine();
         }
-        public static void Swop(ref int num1, ref int num2)
+        enum CarColor : byte
         {
-            int temp = num1;
-            num1 = num2;
-            num2 = temp;
+            orange = 1,
+            green,
+            bule,
+            red,
+            black
+        }
+        static void PaintCar(CarColor cc)
+        {
+            Console.WriteLine("The car is painted {0} and the index is {1}", cc, (int)cc);
         }
     }
 }
