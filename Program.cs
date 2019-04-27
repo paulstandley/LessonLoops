@@ -11,16 +11,21 @@ namespace LessonLoops
     {
         static void Main(string[] args)
         {
-            Animalcs Fox = new Animalcs()
+            Console.WriteLine("The Rectangle area of {0}", ShapeMath.GetArea("Rectangle", 20, 40));
+            Console.WriteLine("The Triangle area of {0}", ShapeMath.GetArea("Triangle", 20, 40));
+            Console.WriteLine("The Circle area of {0}", ShapeMath.GetArea("Circle", 20, 40));
+            Console.WriteLine("The Default area of {0}", ShapeMath.GetArea("Default", 20, 40));
+            // let a data type hold the null value
+            int? randomNull = null;
+            if(randomNull == null)
             {
-                name = "Red",
-                sound = "Raaaarrrww"
-            };
-            Console.WriteLine("Get how many animals were created {0}", Animalcs.GetNumAnimals());
-            Fox.MakeSound();
-            Fox.sound = "Woooo";
-            Fox.MakeSound();
-            Console.WriteLine("{0} is an animal that says {1}", Fox.name, Fox.sound);
+                Console.WriteLine("randomNull is null");
+                randomNull = 42;
+            }
+            if (randomNull.HasValue)
+            {
+                Console.WriteLine("randomNull is {0}", randomNull);
+            }
             Console.ReadLine();
         }
    
