@@ -11,21 +11,19 @@ namespace LessonLoops
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("The Rectangle area of {0}", ShapeMath.GetArea("Rectangle", 20, 40));
-            Console.WriteLine("The Triangle area of {0}", ShapeMath.GetArea("Triangle", 20, 40));
-            Console.WriteLine("The Circle area of {0}", ShapeMath.GetArea("Circle", 20, 40));
-            Console.WriteLine("The Default area of {0}", ShapeMath.GetArea("Default", 20, 40));
-            // let a data type hold the null value
-            int? randomNull = null;
-            if(randomNull == null)
-            {
-                Console.WriteLine("randomNull is null");
-                randomNull = 42;
-            }
-            if (randomNull.HasValue)
-            {
-                Console.WriteLine("randomNull is {0}", randomNull);
-            }
+            Animals cat = new Animals();
+            Console.Write("Give the animal a nane ... ");
+            cat.SetName(Console.ReadLine());
+            Console.Write("Give animal a voise ... ");
+            cat.Sound = Console.ReadLine();
+            Console.WriteLine("The cat is named {0} and says {1}", cat.GetName(), cat.Sound);
+            cat.Owner = "Paul";
+            Console.WriteLine("{0} is owned by {1}", cat.GetName(), cat.Owner);
+            Console.WriteLine("{0}\'s shelter id is {1}", cat.GetName(), cat.IdNum);
+            Animals fox = new Animals("Mr","reeerr");
+            Console.WriteLine("{0} Fox says {1}", fox.GetName(), fox.Sound);
+            fox.MakeSound();
+            Console.WriteLine("# of animals : {0}", Animals.NumOfAnimals);
             Console.ReadLine();
         }
    
