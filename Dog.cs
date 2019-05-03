@@ -17,7 +17,7 @@ namespace LessonLoops
         }
 
         public Dog(string name = "No Name", string sound = "No Sound", string sound2 = "No Sound 2")
-        : base(name, sound)
+            :base(name, sound)
         {
             Sound2 = sound2;
         } 

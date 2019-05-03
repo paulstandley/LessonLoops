@@ -11,9 +11,20 @@ namespace LessonLoops
         private string name;
         protected string sound;
 
+        protected GenusId genusId = new GenusId();
+        public void SetGenusId(int id, string owner)
+        {
+            genusId.Id = id;
+            genusId.Owner = owner;
+        }
+        public void GetGenusId()
+        {
+            Console.WriteLine($"{Name} id is {genusId.Id} and owned by {genusId.Owner}");
+        }
+
         public void MakeSound()
         {
-            Console.WriteLine($"{name} says {sound}");
+            Console.WriteLine($"{Name} says {Sound}");
         }
 
         public Genus()
@@ -59,6 +70,20 @@ namespace LessonLoops
                 }
             }
         }
+        public class AnimalHealth
+        {
+            public bool HealthyWeight(double height,
+                double weight)
+            {
+                double calc = height / weight;
 
+                if ((calc >= .18) && (calc <= .27))
+                {
+                    return true;
+                }
+                else return false;
+            }
+
+        }
     }
 }

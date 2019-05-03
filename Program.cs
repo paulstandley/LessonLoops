@@ -28,6 +28,33 @@ namespace LessonLoops
             Tommy.MakeSound();
             Patch.MakeSound();
 
+            Patch.SetGenusId(12345, "Paul Standley");
+            Tommy.SetGenusId(23432, "Louise Holt");
+
+            Patch.GetGenusId();
+            Tommy.GetGenusId();
+
+            Genus.AnimalHealth getHealth = new Genus.AnimalHealth();
+
+            Console.WriteLine("Is my animal healthy : {0}", getHealth.HealthyWeight(11, 46));
+ 
+            Genus monkey = new Genus()
+            {
+                Name = "Happy",
+                Sound = "Eeeeee"
+            };
+
+            monkey.MakeSound();
+
+            Genus spot = new Dog()
+            {
+                Name = "Spot",
+                Sound = "Wooooff",
+                Sound2 = "Geerrrr"
+            };
+
+            spot.MakeSound();
+
             Console.ReadLine();
         }
    
