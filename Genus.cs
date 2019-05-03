@@ -22,7 +22,7 @@ namespace LessonLoops
             Console.WriteLine($"{Name} id is {genusId.Id} and owned by {genusId.Owner}");
         }
 
-        public void MakeSound()
+        public virtual void MakeSound()
         {
             Console.WriteLine($"{Name} says {Sound}");
         }
